@@ -53,20 +53,17 @@ assets.backgrounds.space.image.src = "space.jpg";
 assets.backgrounds.space.image.onload = () =>
   (assets.backgrounds.space.loaded = true);
 
-assets.character.image.src =
-  "https://cdn-icons-png.flaticon.com/512/4616/4616271.png";
+assets.character.image.src = "Toothy.png";
 assets.character.image.onload = () => (assets.character.loaded = true);
 
-assets.items.item1.image.src =
-  "https://cdn-icons-png.flaticon.com/512/4616/4616089.png";
+assets.items.item1.image.src = "camera.png";
 assets.items.item1.image.onload = () => (assets.items.item1.loaded = true);
 
-assets.items.item2.image.src =
-  "https://cdn-icons-png.flaticon.com/512/4616/4616075.png";
+assets.items.item2.image.src = "pinkflower.png";
 assets.items.item2.image.onload = () => (assets.items.item2.loaded = true);
 
-assets.items.item3.image.src =
-  "https://cdn-icons-png.flaticon.com/512/4616/4616218.png";
+assets.items.item3.image.src = "vase.png";
+("https://cdn-icons-png.flaticon.com/512/4616/4616218.png");
 assets.items.item3.image.onload = () => (assets.items.item3.loaded = true);
 
 // Set crossOrigin to avoid CORS issues with canvas
