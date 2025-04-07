@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Interactive Canvas Game</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Interactive Canvas Game</h1>
+
+      <div class="game-container">
+        <canvas id="gameCanvas" width="800" height="500"></canvas>
+
+        <div class="controls">
+          <div class="control-section">
+            <h2>Background</h2>
+            <div class="radio-group">
+              <div class="radio-item">
+                <input
+                  type="radio"
+                  id="bg1"
+                  name="background"
+                  value="forest"
+                  checked
+                />
+                <label for="bg1">Forest</label>
+              </div>
+              <div class="radio-item">
+                <input type="radio" id="bg2" name="background" value="desert" />
+                <label for="bg2">Desert</label>
+              </div>
+              <div class="radio-item">
+                <input type="radio" id="bg3" name="background" value="space" />
+                <label for="bg3">Space</label>
+              </div>
+            </div>
+          </div>
+
+          <div class="control-section">
+            <h2>Character Position</h2>
+            <div class="slider-container">
+              <label for="positionSlider">Position:</label>
+              <input
+                type="range"
+                id="positionSlider"
+                min="0"
+                max="100"
+                value="50"
+              />
+
+              <div class="radio-group movement-type">
+                <div class="radio-item">
+                  <input
+                    type="radio"
+                    id="moveX"
+                    name="moveDirection"
+                    value="x"
+                    checked
+                  />
+                  <label for="moveX">Move Horizontally</label>
+                </div>
+                <div class="radio-item">
+                  <input
+                    type="radio"
+                    id="moveY"
+                    name="moveDirection"
+                    value="y"
+                  />
+                  <label for="moveY">Move Vertically</label>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="control-section">
+            <h2>Items</h2>
+            <div class="checkbox-group">
+              <div class="checkbox-item">
+                <input type="checkbox" id="item1" checked />
+                <label for="item1">Show Treasure Chest</label>
+              </div>
+              <div class="checkbox-item">
+                <input type="checkbox" id="item2" checked />
+                <label for="item2">Show Magic Crystal</label>
+              </div>
+              <div class="checkbox-item">
+                <input type="checkbox" id="item3" checked />
+                <label for="item3">Show Friendly Creature</label>
+              </div>
+            </div>
+          </div>
+
+          <div class="control-section">
+            <h2>Sound Effects</h2>
+            <div class="button-group">
+              <button id="sound1">Play Magic Sound</button>
+              <button id="sound2">Play Victory Sound</button>
+              <button id="sound3">Play Alert Sound</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="scripts.js"></script>
+  </body>
+</html>
