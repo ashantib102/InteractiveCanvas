@@ -8,9 +8,9 @@ const gameState = {
   characterPosition: 50, // percentage
   moveDirection: "x",
   items: {
-    item1: true, // treasure chest
-    item2: true, // magic crystal
-    item3: true, // friendly creature
+    item1: true, // Camera
+    item2: true, // Flower
+    item3: true, // Lantern
   },
 };
 
@@ -23,20 +23,14 @@ const assets = {
   },
   character: { loaded: false, image: new Image() },
   items: {
-    item1: { loaded: false, image: new Image() }, // treasure chest
-    item2: { loaded: false, image: new Image() }, // magic crystal
-    item3: { loaded: false, image: new Image() }, // friendly creature
+    item1: { loaded: false, image: new Image() }, // Camera
+    item2: { loaded: false, image: new Image() }, // Flower
+    item3: { loaded: false, image: new Image() }, // Lantern
   },
   sounds: {
-    sound1: new Audio(
-      "https://assets.mixkit.co/active_storage/sfx/2019/magic-sweep-game-trophy-presentation-571.wav"
-    ),
-    sound2: new Audio(
-      "https://assets.mixkit.co/active_storage/sfx/212/212-preview.mp3"
-    ),
-    sound3: new Audio(
-      "https://assets.mixkit.co/active_storage/sfx/1434/1434-preview.mp3"
-    ),
+    sound1: new Audio("growl.mp3"),
+    sound2: new Audio("camera.mp3"),
+    sound3: new Audio("fairy.mp3"),
   },
 };
 
@@ -62,7 +56,7 @@ assets.items.item1.image.onload = () => (assets.items.item1.loaded = true);
 assets.items.item2.image.src = "pinkflower.png";
 assets.items.item2.image.onload = () => (assets.items.item2.loaded = true);
 
-assets.items.item3.image.src = "vase.png";
+assets.items.item3.image.src = "lanternclipart.png";
 ("https://cdn-icons-png.flaticon.com/512/4616/4616218.png");
 assets.items.item3.image.onload = () => (assets.items.item3.loaded = true);
 
@@ -158,7 +152,7 @@ function drawGame() {
   }
 
   // Calculate character position
-  const characterSize = 80;
+  const characterSize = 200;
   let characterX, characterY;
 
   if (gameState.moveDirection === "x") {
@@ -183,7 +177,13 @@ function drawGame() {
   }
 
   if (gameState.items.item3 && assets.items.item3.loaded) {
-    ctx.drawImage(assets.items.item3.image, canvas.width / 2 - 35, 100, 70, 70);
+    ctx.drawImage(
+      assets.items.item3.image,
+      canvas.width / 2 - 35,
+      100,
+      70,
+      120
+    );
   }
 
   // Draw character

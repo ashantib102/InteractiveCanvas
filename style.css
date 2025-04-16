@@ -6,7 +6,7 @@
 }
 
 body {
-  background-color: #121212;
+  background-color: #000000;
   color: #f0f0f0;
   padding: 20px;
 }
@@ -17,15 +17,16 @@ body {
 }
 
 h1 {
+  font-size: 3rem;
   text-align: center;
-  margin-bottom: 20px;
-  color: #4ecca3;
+  margin-bottom: 1rem;
+  color: #ffffff;
 }
 
 h2 {
   margin-bottom: 10px;
   font-size: 1.2rem;
-  color: #4ecca3;
+  color: #ffffff;
 }
 
 .game-container {
@@ -46,7 +47,7 @@ canvas {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 20px;
-  background-color: #232931;
+  background-color: #000000;
   padding: 20px;
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
@@ -54,7 +55,7 @@ canvas {
 
 .control-section {
   padding: 15px;
-  background-color: #393e46;
+  background-color: #000000;
   border-radius: 6px;
 }
 
@@ -75,7 +76,7 @@ canvas {
 
 input[type="radio"],
 input[type="checkbox"] {
-  accent-color: #4ecca3;
+  accent-color: #2033af;
   width: 18px;
   height: 18px;
 }
@@ -91,7 +92,7 @@ input[type="range"] {
   height: 8px;
   -webkit-appearance: none;
   appearance: none;
-  background: #232931;
+  background: #ffffff;
   border-radius: 4px;
   outline: none;
 }
@@ -101,7 +102,7 @@ input[type="range"]::-webkit-slider-thumb {
   appearance: none;
   width: 20px;
   height: 20px;
-  background: #4ecca3;
+  background: #2033af;
   border-radius: 50%;
   cursor: pointer;
 }
@@ -109,15 +110,15 @@ input[type="range"]::-webkit-slider-thumb {
 input[type="range"]::-moz-range-thumb {
   width: 20px;
   height: 20px;
-  background: #4ecca3;
+  background: #2033af;
   border-radius: 50%;
   cursor: pointer;
 }
 
 button {
   padding: 10px 15px;
-  background-color: #4ecca3;
-  color: #232931;
+  background-color: #2033af;
+  color: #ffffff;
   border: none;
   border-radius: 4px;
   cursor: pointer;
@@ -126,7 +127,7 @@ button {
 }
 
 button:hover {
-  background-color: #3aa889;
+  background-color: #5868b8;
 }
 
 .movement-type {
@@ -147,5 +148,17 @@ button:hover {
     width: 300px;
     display: flex;
     flex-direction: column;
+  }
+}
+
+@media (min-width: 765px) and (max-width: 1200px) {
+  .game-container {
+    flex-direction: column; /* Stack canvas and controls vertically */
+    align-items: center; /* Center align the content */
+  }
+
+  .controls {
+    width: 100%; /* Ensure controls take full width */
+    max-width: 800px; /* Optional: Limit the maximum width */
   }
 }
